@@ -22,10 +22,22 @@ def getLeadingZero(aNum):
 #    print(factorial(int(i)))
 #    print
 
+############################################################
+def theNewGetLeadingZero(aNum):
+    totalLeadingZero = 0
+    i = 5
+    while i <= aNum:
+        # In Python 3.0, 5 / 2 will return 2.5 and 5 // 2 will return 2
+        totalLeadingZero += aNum//i 
+        i *= 5
+
+    return totalLeadingZero
+############################################################
 
 leadingZero = 0
-for i in range (1, 1025):
-    newLeadingZero = getLeadingZero(factorial(i))
+for i in range (1, 101):
+    #newLeadingZero = getLeadingZero(factorial(i))
+    newLeadingZero = theNewGetLeadingZero(i)
     if newLeadingZero > leadingZero:
         forPrint = str(i) + '\t= ' + str(newLeadingZero)
 
