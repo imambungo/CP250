@@ -27,7 +27,7 @@ leadingZero = 0
 for i in range (1, 1025):
     newLeadingZero = getLeadingZero(factorial(i))
     if newLeadingZero > leadingZero:
-        forPrint = str(i) + '\t= ' + str(leadingZero)
+        forPrint = str(i) + '\t= ' + str(newLeadingZero)
 
         if newLeadingZero - leadingZero > 1:
             forPrint += ' -> ' + str(newLeadingZero - leadingZero)
